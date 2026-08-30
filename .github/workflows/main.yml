@@ -13,20 +13,21 @@ jobs:
     - uses: actions/checkout@v4
 
     - name: Set up JDK 17
-      uses: actions/setup-java@v4
+      uses: actions/setup-java@v5
       with:
         java-version: '17'
         distribution: 'temurin'
-        cache: gradle
 
     - name: Grant execute permission for gradlew
-      run: chmod +x gradlew || true
+      run: chmod +x gradlew
+      working-directory: pelatih diet-ai
 
     - name: Build APK with Gradle
       run: ./gradlew assembleDebug
+      working-directory: pelatih diet-ai
 
     - name: Upload APK
       uses: actions/upload-artifact@v4
       with:
         name: dietcoach-ai-app
-        path: app/build/outputs/apk/debug/app-debug.apk
+        path: pelatih diet-ai/app/build/outputs/apk/debug/app-debug.apk
