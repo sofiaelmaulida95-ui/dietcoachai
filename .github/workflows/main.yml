@@ -20,14 +20,14 @@ jobs:
 
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
-      working-directory: pelatih diet-ai
+      working-directory: "pelatih diet-ai"
 
     - name: Build APK with Gradle
       run: ./gradlew assembleDebug
-      working-directory: pelatih diet-ai
+      working-directory: "pelatih diet-ai"
 
     - name: Upload APK
       uses: actions/upload-artifact@v4
       with:
         name: dietcoach-ai-app
-        path: pelatih diet-ai/app/build/outputs/apk/debug/app-debug.apk
+        path: "pelatih diet-ai/app/build/outputs/apk/debug/app-debug.apk"
