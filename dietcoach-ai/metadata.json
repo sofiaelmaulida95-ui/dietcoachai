@@ -1,0 +1,6 @@
+{
+  "name": "DietCoach AI",
+  "description": "Personal 4-month AI Diet & Nutrition Coach with automated food calorie scanning, Huawei Health workout sync, water & weight tracking, PDF progress reports, custom recipes, and interactive coaching.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
